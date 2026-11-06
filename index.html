@@ -174,6 +174,39 @@ button{font-family:inherit;cursor:pointer}
 .bank .no{font-weight:300;font-size:24px;letter-spacing:.1em;margin:4px 0 0;word-break:break-all;color:var(--ink-d)}
 .bank .an{font-size:12px;color:var(--mut);margin-bottom:14px}
 .bank .ad{font-size:12.5px;margin:6px 0 14px}
+/* tema kartu rekening per bank (adaptif v2) */
+/* hanya warna, motif & logo: ukuran, jarak, huruf, sudut & garis tepi mengikuti template yang sudah ada */
+.bank[data-bk]{color:var(--bt);border-color:var(--ba);outline-color:var(--ba);overflow:hidden;background:var(--pt),linear-gradient(140deg,var(--b1),var(--b2))}
+.bank[data-bk]::before{content:"";position:absolute;right:-50px;top:-60px;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.28),rgba(255,255,255,0) 70%);pointer-events:none}
+.bank[data-bk]>*{position:relative;z-index:1}
+.bank[data-bk] .bn{color:var(--bt)}
+.bank[data-bk] .bn.lgp{display:flex;align-items:center;justify-content:center;box-sizing:border-box;background:#fff;padding:0 .7em;border-radius:.3em;height:1.85em;height:1lh}
+.bank .lg{display:block;height:72%;width:auto;max-width:72%}
+.bank[data-bk] .no{color:var(--bt)}
+.bank[data-bk] .an{color:var(--bt);opacity:.88}
+.bank[data-bk] .btn.o{color:var(--bt);border-color:var(--ba);background:rgba(255,255,255,.14)}
+.bank[data-bk=bca]{--b1:#0060AF;--b2:#00437d;--bt:#fff;--ba:#8cc0f2;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2260%22%20height=%2224%22%3E%3Cpath%20d=%22M0%2012%20Q15%200%2030%2012%20T60%2012%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=bri]{--b1:#0857C3;--b2:#053b88;--bt:#fff;--ba:#f7941d;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2228%22%20height=%2228%22%3E%3Cpath%20d=%22M14%201%2027%2014%2014%2027%201%2014Z%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=bni]{--b1:#005E6A;--b2:#003f48;--bt:#fff;--ba:#f26f21;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2222%22%20height=%2222%22%3E%3Cpath%20d=%22M-2%2024%2024-2M-2%2013%2013-2M9%2024%2024%209%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=mandiri]{--b1:#003A70;--b2:#00264d;--bt:#fff;--ba:#fcb017;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2236%22%20height=%2218%22%3E%3Cpath%20d=%22M0%204%2018%2016%2036%204%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=bsi]{--b1:#00A39D;--b2:#006f6b;--bt:#fff;--ba:#f8ad3c;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2240%22%20height=%2240%22%3E%3Cpath%20d=%22M20%203%2025%2015%2037%2020%2025%2025%2020%2037%2015%2025%203%2020%2015%2015Z%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=cimb]{--b1:#790008;--b2:#4d0005;--bt:#fff;--ba:#ed3024;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2234%22%20height=%2230%22%3E%3Cpath%20d=%22M9%201h16l8%2014-8%2014H9L1%2015Z%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=permata]{--b1:#0064FF;--b2:#003fa8;--bt:#fff;--ba:#9cc2ff;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2240%22%20height=%2240%22%3E%3Ccircle%20cx=%2220%22%20cy=%2220%22%20r=%2216%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3Ccircle%20cx=%2220%22%20cy=%2220%22%20r=%228%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=btn]{--b1:#015BFD;--b2:#0140b0;--bt:#fff;--ba:#ff8a8a;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2222%22%20height=%2222%22%3E%3Cpath%20d=%22M-2%2024%2024-2M-2%2013%2013-2M9%2024%2024%209%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=danamon]{--b1:#046148;--b2:#033f2f;--bt:#fff;--ba:#ef9826;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2228%22%20height=%2228%22%3E%3Cpath%20d=%22M14%201%2027%2014%2014%2027%201%2014Z%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=jago]{--b1:#FDAF27;--b2:#e89610;--bt:#2b2b2b;--ba:#2b2b2b;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2218%22%20height=%2218%22%3E%3Ccircle%20cx=%229%22%20cy=%229%22%20r=%222%22%20fill=%22%232b2b2b%22%20fill-opacity=%220.18000000000000002%22/%3E%3C/svg%3E")}
+.bank[data-bk=seabank]{--b1:#EA5F00;--b2:#c24a00;--bt:#fff;--ba:#ffd3ba;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2260%22%20height=%2224%22%3E%3Cpath%20d=%22M0%2012%20Q15%200%2030%2012%20T60%2012%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=dana]{--b1:#008CEB;--b2:#0067b0;--bt:#fff;--ba:#c3e4ff;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2240%22%20height=%2240%22%3E%3Ccircle%20cx=%2220%22%20cy=%2220%22%20r=%2216%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3Ccircle%20cx=%2220%22%20cy=%2220%22%20r=%228%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=ovo]{--b1:#5827D4;--b2:#3d1a96;--bt:#fff;--ba:#cdb8f2;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2218%22%20height=%2218%22%3E%3Ccircle%20cx=%229%22%20cy=%229%22%20r=%222%22%20fill=%22%23fff%22%20fill-opacity=%220.18000000000000002%22/%3E%3C/svg%3E")}
+.bank[data-bk=gopay]{--b1:#00AED6;--b2:#007aa6;--bt:#fff;--ba:#a5ebf8;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2240%22%20height=%2240%22%3E%3Ccircle%20cx=%2220%22%20cy=%2220%22%20r=%2216%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3Ccircle%20cx=%2220%22%20cy=%2220%22%20r=%228%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=shopeepay]{--b1:#E8451E;--b2:#bf3112;--bt:#fff;--ba:#ffc6b8;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2222%22%20height=%2222%22%3E%3Cpath%20d=%22M-2%2024%2024-2M-2%2013%2013-2M9%2024%2024%209%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=linkaja]{--b1:#E82529;--b2:#b0151a;--bt:#fff;--ba:#ffb8ba;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2236%22%20height=%2218%22%3E%3Cpath%20d=%22M0%204%2018%2016%2036%204%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=jenius]{--b1:#00A4DE;--b2:#0078a8;--bt:#fff;--ba:#b3efff;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2260%22%20height=%2224%22%3E%3Cpath%20d=%22M0%2012%20Q15%200%2030%2012%20T60%2012%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=maybank]{--b1:#FFC600;--b2:#e5a900;--bt:#231F20;--ba:#231F20;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2222%22%20height=%2222%22%3E%3Cpath%20d=%22M-2%2024%2024-2M-2%2013%2013-2M9%2024%2024%209%22%20fill=%22none%22%20stroke=%22%23231F20%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=ocbc]{--b1:#D10A10;--b2:#9c070c;--bt:#fff;--ba:#ffb3b8;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2228%22%20height=%2228%22%3E%3Cpath%20d=%22M14%201%2027%2014%2014%2027%201%2014Z%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=bjb]{--b1:#1B517E;--b2:#103554;--bt:#fff;--ba:#f2c94c;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2260%22%20height=%2224%22%3E%3Cpath%20d=%22M0%2012%20Q15%200%2030%2012%20T60%2012%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
+.bank[data-bk=neo]{--b1:#FFBE00;--b2:#e0a000;--bt:#1a1a1a;--ba:#1a1a1a;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2218%22%20height=%2218%22%3E%3Ccircle%20cx=%229%22%20cy=%229%22%20r=%222%22%20fill=%22%231a1a1a%22%20fill-opacity=%220.18000000000000002%22/%3E%3C/svg%3E")}
+.bank[data-bk=muamalat]{--b1:#420655;--b2:#2b0437;--bt:#fff;--ba:#6fbd62;--pt:url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2240%22%20height=%2240%22%3E%3Cpath%20d=%22M20%203%2025%2015%2037%2020%2025%2025%2020%2037%2015%2025%203%2020%2015%2015Z%22%20fill=%22none%22%20stroke=%22%23fff%22%20stroke-opacity=%220.14%22%20stroke-width=%221.4%22/%3E%3C/svg%3E")}
 
 /* ---------- ucapan ---------- */
 .fm{max-width:360px;margin:0 auto;text-align:left}
@@ -256,6 +289,7 @@ var OFS={WIB:'+07:00',WITA:'+08:00',WIT:'+09:00'};
 var ZONA=OFS[D.zona]?D.zona:'WIB';
 var $=function(s,r){return (r||document).querySelector(s)};
 var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function bk(n){var x=String(n||'').toLowerCase().replace(/[^a-z0-9]/g,'').replace(/^bank/,''),M=[['bca',/^(bca|centralasia)/],['bri',/^(bri|rakyatindonesia)/],['bni',/^(bni|negaraindonesia)/],['mandiri',/^mandiri/],['bsi',/^(bsi|syariahindonesia)/],['cimb',/^cimb/],['permata',/^permata/],['btn',/^(btn|tabungannegara)/],['danamon',/^danamon/],['jago',/^jago/],['seabank',/^seabank/],['dana',/^dana$/],['ovo',/^ovo$/],['gopay',/^gopay/],['shopeepay',/^(shopeepay|spay)/],['linkaja',/^linkaja/],['jenius',/^(jenius|btpn)/],['maybank',/^maybank/],['ocbc',/^ocbc/],['bjb',/^bjb/],['neo',/^neo/],['muamalat',/^muamalat/]];for(var i=0;i<M.length;i++)if(M[i][1].test(x))return M[i][0];return''}
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function tgl(s){var p=String(s||'').split('-');if(p.length<3)return '';var d=new Date(+p[0],+p[1]-1,+p[2]);return HARI[d.getDay()]+', '+(+p[2])+' '+BLN[+p[1]-1]+' '+p[0]}
 function jam(s){return String(s||'').replace(':','.')}
@@ -319,8 +353,12 @@ function svg(n){return '<svg viewBox="0 0 24 24">'+IC[n]+'</svg>'}
 /* ---------- data turunan ---------- */
 var pr=D.pria||{},wn=D.wanita||{},F=D.foto||{},ak=D.akad||null,rs=D.resepsi||null;
 var PANG=(pr.panggilan||'Mempelai Pria'),WANG=(wn.panggilan||'Mempelai Wanita');
-var NAMA=PANG+' & '+WANG;
+var URUT_URL=(new URLSearchParams(location.search).get('urut')||'').toLowerCase();
+var WF=(URUT_URL==='wanita'||URUT_URL==='pria')?URUT_URL==='wanita':(D.pihakKlien||D.urutanNama)==='wanita';
+var N1,N2,I1,I2,NAMA;
+function ord(){N1=WF?WANG:PANG;N2=WF?PANG:WANG;I1=WF?INW:INI;I2=WF?INI:INW;NAMA=N1+' & '+N2}
 var INI=(PANG.charAt(0)+'').toUpperCase(),INW=(WANG.charAt(0)+'').toUpperCase();
+ord();
 var tamu=(function(){var v=(new URLSearchParams(location.search).get('to')||'').trim().slice(0,40);return v.toLowerCase()==='tamu undangan'?'':v})();
 var S={ucapanPublik:D.ucapanPublik!==false,turut:!!D.turutMengundangTampil,rek:[true,true]};
 var utama=ak||rs;
@@ -333,7 +371,7 @@ function eventCard(judul,e,idx){
   var gcal='';
   try{var st=wkt(e.tanggal,e.jamMulai),en=e.jamSelesai?wkt(e.tanggal,e.jamSelesai):new Date(st.getTime()+2*3600*1000);
     var f=function(d){return d.toISOString().replace(/[-:]|\.\d{3}/g,'')};
-    gcal='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(judul+' '+NAMA)+'&dates='+f(st)+'/'+f(en)+'&details='+encodeURIComponent('Pernikahan '+(pr.nama||PANG)+' & '+(wn.nama||WANG))+'&location='+encodeURIComponent(e.tempat+', '+e.alamat);}catch(x){}
+    gcal='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(judul+' '+NAMA)+'&dates='+f(st)+'/'+f(en)+'&details='+encodeURIComponent('Pernikahan '+(WF?(wn.nama||WANG)+' & '+(pr.nama||PANG):(pr.nama||PANG)+' & '+(wn.nama||WANG)))+'&location='+encodeURIComponent(e.tempat+', '+e.alamat);}catch(x){}
   var p=parts(e.tanggal)||{hari:'',tgl:'',bln:'',thn:''};
   return '<div class="ev rv d'+idx+'"><div class="lbl">'+esc(judul)+'</div>'+
    '<div class="dd"><span>'+esc(p.hari)+'</span><b>'+esc(p.tgl)+'</b><span>'+esc(p.bln)+'<br>'+esc(p.thn)+'</span></div>'+
@@ -345,16 +383,16 @@ function eventCard(judul,e,idx){
 function mempelai(o,foto,g){
   var anak=g==='p'?(o.putraKe?'Putra ke-'+esc(o.putraKe):'Putra'):(o.putriKe?'Putri ke-'+esc(o.putriKe):'Putri');
   var ig=o.instagram?'<a class="ig" target="_blank" rel="noopener" href="https://instagram.com/'+esc(String(o.instagram).replace(/^@/,''))+'">'+svg('ig')+'@'+esc(String(o.instagram).replace(/^@/,''))+'</a>':'';
-  return '<div class="rv"><div class="arch"><div class="im">'+(foto?'<img src="'+esc(foto)+'" alt="'+esc(o.nama)+'" loading="lazy">':'')+'</div></div>'+
+  return '<div class="rv" data-g="'+g+'"><div class="arch"><div class="im">'+(foto?'<img src="'+esc(foto)+'" alt="'+esc(o.nama)+'" loading="lazy">':'')+'</div></div>'+
    '<div class="pn">'+esc(o.panggilan)+'</div><div class="pf">'+esc(o.nama)+'</div>'+
    '<div class="po">'+anak+' dari<br><b>Bapak '+esc(o.ayah)+'</b> &amp; <b>Ibu '+esc(o.ibu)+'</b></div>'+ig+'</div>';
 }
 
 function cover(){
   return '<section class="cover tx" id="cover">'+corner('cl')+corner('cr')+
-   '<div class="ci"><div class="mono">'+esc(INI)+'&amp;'+esc(INW)+'</div>'+
+   '<div class="ci"><div class="mono">'+esc(I1)+'&amp;'+esc(I2)+'</div>'+
    '<div class="eyebrow">Save The Date</div>'+
-   '<div class="nm">'+esc(PANG)+'<em>&amp;</em>'+esc(WANG)+'</div>'+
+   '<div class="nm">'+esc(N1)+'<em>&amp;</em>'+esc(N2)+'</div>'+
    '<div class="jn">join with us!</div></div>'+
    '<div class="pan"><div class="gst"><small>Kepada Yth. Bapak/Ibu/Saudara/i</small><b>'+esc(tamu||'Tamu Undangan')+'</b><i>Mohon maaf apabila terdapat kesalahan penulisan nama dan gelar.</i></div>'+
    (utama?'<div class="dt">'+esc(tgl(utama.tanggal))+'<br>'+esc(utama.tempat||'')+'</div>':'<div class="dt"></div>')+
@@ -366,7 +404,7 @@ function build(){
   /* beranda */
   h+='<section class="sec hero fotobg" id="beranda"'+(F.latarUtama?' style="background-image:url('+esc(F.latarUtama)+')"':'')+'>'+
     '<div class="eyebrow rv">The Wedding Of</div>'+
-    '<div class="nm rv d1">'+esc(PANG)+'<em>&amp;</em>'+esc(WANG)+'</div>'+
+    '<div class="nm rv d1">'+esc(N1)+'<em>&amp;</em>'+esc(N2)+'</div>'+
     (utama?'<div class="tg rv d2">'+esc(tglPanjang(utama.tanggal))+'</div>':'')+
     '<div class="cd rv d3" id="cd"></div><div class="scroll">Scroll</div></section>';
 
@@ -379,7 +417,7 @@ function build(){
   h+='<section class="sec alt" id="mempelai">'+corner('tr')+corner('bl')+
     head('Bismillahirrahmanirrahim','Mempelai')+
     '<p class="sub rv">Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan.</p>'+
-    mempelai(pr,F.pria,'p')+'<div class="amp rv">&amp;</div>'+mempelai(wn,F.wanita,'w')+'</section>';
+    (WF?mempelai(wn,F.wanita,'w'):mempelai(pr,F.pria,'p'))+'<div class="amp rv">&amp;</div>'+(WF?mempelai(pr,F.pria,'p'):mempelai(wn,F.wanita,'w'))+'</section>';
 
   /* cerita */
   if(D.cerita&&D.cerita.length){
@@ -408,7 +446,7 @@ function build(){
     h+='<section class="sec alt" id="hadiah">'+corner('tl')+corner('br')+
       head('Tanda Kasih','Hadiah Pernikahan')+
       '<p class="sub rv">Doa restu Anda adalah hadiah terindah. Namun bila ingin memberi tanda kasih, dapat melalui:</p><div id="bank">'+
-      hd.map(function(b,i){return '<div class="bank rv" data-r="'+i+'"><div class="bn">'+esc(b.bank)+'</div><div class="no">'+esc(b.nomor)+'</div><div class="an">a.n. '+esc(b.atasNama)+'</div><button class="btn s o" data-cp="'+esc(b.nomor)+'">'+svg('copy')+'Salin nomor</button></div>'}).join('')+'</div>'+
+      hd.map(function(b,i){var k=bk(b.bank),kl=D.logoBank===false?'':k;return '<div class="bank rv" data-r="'+i+'"'+(k?' data-bk="'+k+'"':'')+'><div class="bn'+(kl?' lgp':'')+'">'+(kl?'<img class="lg" src="foto/bank/'+kl+'.svg" alt="'+esc(b.bank)+'" onerror="var p=this.parentNode;p.classList.remove(\'lgp\');p.textContent=this.alt">':esc(b.bank))+'</div><div class="no">'+esc(b.nomor)+'</div><div class="an">a.n. '+esc(b.atasNama)+'</div><button class="btn s o" data-cp="'+esc(b.nomor)+'">'+svg('copy')+'Salin nomor</button></div>'}).join('')+'</div>'+
       (D.alamatKado?'<div class="bank rv"><div class="bn">Kirim Kado</div><div class="ad">'+esc(D.alamatKado)+'</div><button class="btn s o" data-cp="'+esc(D.alamatKado)+'">'+svg('copy')+'Salin alamat</button></div>':'')+'</section>';
   }
 
@@ -521,6 +559,20 @@ function terapkan(){
   $$('#bank [data-r]').forEach(function(e){e.style.display=S.rek[+e.dataset.r]===false?'none':''});
   if(S.turut&&D.turutMengundang&&D.turutMengundang.length){var t=$('#turut');t.style.display='';$('#tm').innerHTML=D.turutMengundang.map(esc).join('<br>');t.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')})}
 }
+function terapkanUrutan(w){
+  if(w===WF)return;
+  var lama=NAMA,lamaD=WF?(wn.nama||WANG)+' & '+(pr.nama||PANG):(pr.nama||PANG)+' & '+(wn.nama||WANG);
+  WF=w;ord();
+  var a=$('#cover .nm');if(a)a.innerHTML=esc(N1)+'<em>&amp;</em>'+esc(N2);
+  a=$('#cover .mono');if(a)a.innerHTML=esc(I1)+'&amp;'+esc(I2);
+  a=$('#beranda .nm');if(a)a.innerHTML=esc(N1)+'<em>&amp;</em>'+esc(N2);
+  a=$('#penutup .nm');if(a)a.textContent=NAMA;
+  a=$('#side .n');if(a)a.textContent=NAMA;
+  var m=$('#mempelai'),gp=m&&$('[data-g=p]',m),gw=m&&$('[data-g=w]',m),amp=m&&$('.amp',m);
+  if(gp&&gw&&amp){m.insertBefore(WF?gw:gp,amp);amp.parentNode.insertBefore(WF?gp:gw,amp.nextSibling)}
+  var baruD=WF?(wn.nama||WANG)+' & '+(pr.nama||PANG):(pr.nama||PANG)+' & '+(wn.nama||WANG);
+  $$('a[href*="calendar.google"]').forEach(function(l){l.href=l.href.split(encodeURIComponent(lama)).join(encodeURIComponent(NAMA)).split(encodeURIComponent('Pernikahan '+lamaD)).join(encodeURIComponent('Pernikahan '+baruD))});
+}
 function muatPengaturan(){
   if(!FB.aktif)return Promise.resolve();
   return FB.pengaturan().then(function(p){if(!p)return;
@@ -528,6 +580,7 @@ function muatPengaturan(){
     if(typeof p.turutTampil==='boolean')S.turut=p.turutTampil;
     if(typeof p.rekening1==='boolean')S.rek[0]=p.rekening1;
     if(typeof p.rekening2==='boolean')S.rek[1]=p.rekening2;
+    if(!URUT_URL&&(p.urutNama==='pria'||p.urutNama==='wanita'))terapkanUrutan(p.urutNama==='wanita');
   }).catch(function(){});
 }
 
@@ -544,6 +597,20 @@ $('#buka').onclick=function(){
   setTimeout(function(){$('#nav').classList.add('on')},700);window.scrollTo(0,0);
 };
 })();
+</script>
+<script>
+/* menu: tetap sampai ke bagian tujuan walau tinggi halaman berubah saat foto dimuat (lazy-load) */
+(function(){var timer;
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a||e.defaultPrevented)return;
+  var id=a.getAttribute('href').slice(1),t=id&&document.getElementById(id);if(!t)return;
+  clearInterval(timer);var last=-1,tries=0,ticks=0;
+  timer=setInterval(function(){ticks++;var y=window.scrollY;
+    if(Math.abs(y-last)<1){var d=t.getBoundingClientRect().top;
+      if(Math.abs(d)>4&&tries<6){tries++;window.scrollTo({top:y+d,behavior:'smooth'})}else clearInterval(timer)}
+    last=y;if(ticks>90)clearInterval(timer)},160);
+  ['wheel','touchstart'].forEach(function(ev){window.addEventListener(ev,function(){clearInterval(timer)},{once:true,passive:true})});
+},true)})();
 </script>
 </body>
 </html>
